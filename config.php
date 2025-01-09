@@ -4,10 +4,10 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 
-$host = 'localhost';
-$dbname = 'library';
-$username = 'root';
-$password = '';
+$host = 'sql113.infinityfree.com';
+$dbname = 'if0_38057726_library';
+$username = 'if0_38057726';
+$password = 'ZPb3ArdLO5liBey';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
