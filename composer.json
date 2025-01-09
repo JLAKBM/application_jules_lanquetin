@@ -1,0 +1,21 @@
+{
+    "name": "vendor/application_jules_lanquetin",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\ApplicationJulesLanquetin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jules Lanquetin",
+            "email": "juleslqt@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    }
+}
