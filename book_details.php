@@ -54,21 +54,21 @@ if (isset($_GET['id'])) {
             <?php endif; ?>
         </div>
         <div class="back-button">
-    <button onclick="window.location.href = 'books.php'">Retour à la liste des livres</button>
-    <?php if ($book['statut'] != "emprunté") { ?>
-    <button onclick="window.location.href = 'borrow_book.php?id=<?= htmlspecialchars($book['id']); ?>'">Emprunter ce livre</button>
-    <?php } ?>
+            <button onclick="window.location.href = 'books.php'">Retour à la liste des livres</button>
+        <?php if ($book['statut'] != "emprunté") { ?>
+            <button onclick="window.location.href = 'borrow_book.php?id=<?= htmlspecialchars($book['id']); ?>'">Emprunter ce livre</button>
+        <?php } ?>
 
-    <?php
-    // Ajoutez une vérification du rôle de l'utilisateur
-    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-        // Si l'utilisateur est un administrateur, affichez les boutons "Modifier" et "Supprimer"
-        echo '<button onclick="window.location.href = \'edit_book.php?book_id=' . $bookId . '\'">Modifier le livre</button>';
-        echo '<button onclick="showDeleteConfirmation(' . $bookId . ')">Supprimer le livre</button>';
-    }
-    ?>
+        <?php
+        // Ajoutez une vérification du rôle de l'utilisateur
+        if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+            // Si l'utilisateur est un administrateur, affichez les boutons "Modifier" et "Supprimer"
+            echo '<button onclick="window.location.href = \'edit_book.php?book_id=' . $bookId . '\'">Modifier le livre</button>';
+            echo '<button onclick="showDeleteConfirmation(' . $bookId . ')">Supprimer le livre</button>';
+        }
+        ?>
 
-</div>
+        </div>
 
     </div>
 </body>
